@@ -9,10 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('supplier', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_supplier'); // Primary Key
+            $table->string('nama_supplier');
+            $table->string('no_telp');
+            $table->text('alamat');
             $table->timestamps();
         });
     }
